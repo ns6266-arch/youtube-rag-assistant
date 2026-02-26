@@ -1,6 +1,6 @@
-# Tuned
+# Tuned - Your YouTube RAG Assistant
 
-An end-to-end **RAG** pipeline with timestamp-aware retrieval over YouTube transcripts — built with **LangChain**, **OpenAI Whisper**, **ChromaDB**, and **GPT-4o-mini**, deployed on Streamlit with **LangSmith** observability.
+An end-to-end **RAG** pipeline with timestamp-aware retrieval over YouTube transcripts : built with **LangChain**, **OpenAI Whisper**, **ChromaDB**, and **GPT-4o-mini**, deployed on Streamlit with **LangSmith** observability.
 
 Paste any YouTube URL and have a multi-turn conversation with the video. Every answer cites the exact moment it came from as a clickable timestamp link.
 
