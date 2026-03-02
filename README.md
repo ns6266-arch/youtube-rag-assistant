@@ -9,15 +9,15 @@ Paste any YouTube URL and have a multi-turn conversation with the video. Every a
 ## How it works
 
 ```mermaid
-flowchart LR
-    A[YouTube URL] --> B[yt-dlp\naudio download]
-    B --> C[Whisper API\ntranscription]
-    C --> D[Chunker\ntimestamp-aware]
-    D --> E[ChromaDB\nvector store]
+flowchart TD
+    A[YouTube URL] --> B[yt-dlp<br/>audio download]
+    B --> C[Whisper API<br/>transcription]
+    C --> D[Chunker<br/>timestamp-aware]
+    D --> E[ChromaDB<br/>vector store]
     F[User question] --> G[LCEL RAG Chain]
     E --> G
     G --> H[GPT-4o-mini]
-    H --> I[Answer +\ntimestamp links]
+    H --> I[Answer +<br/>timestamp links]
 ```
 
 **Ingestion:** yt-dlp reads the audio, Whisper transcribes it with segment-level timestamps, the chunker groups segments into overlapping ~400-word chunks, and each chunk is embedded and stored in ChromaDB with its metadata. The transcript is cached to disk so the same video is never re-processed.
