@@ -10,7 +10,7 @@ Paste any YouTube URL and have a multi-turn conversation with the video. Every a
 
 ```mermaid
 flowchart TD
-    A[YouTube URL] --> B[yt-dlp<br/>audio download]
+    A[YouTube URL] --> B[yt-dlp<br/>audio reader]
     B --> C[Whisper API<br/>transcription]
     C --> D[Chunker<br/>timestamp-aware]
     D --> E[ChromaDB<br/>vector store]
